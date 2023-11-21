@@ -1,0 +1,39 @@
+.footer-about{
+  
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.nav-title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+
+
+}
+.footernav h5{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 35px;
+}
+.subfooter-text{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 2px;
+
+
+}
+.footernav h5{
+    transition: all 0.3 ease;
+
+}
+.footernav h5:hover{
+    color: rgb(219, 213, 213);
+    cursor: pointer;
+    transform: scale(.98);
+}
+.footerbg{
+    background: var(--dark-color);
+    color: white;
+}

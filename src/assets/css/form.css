@@ -1,0 +1,23 @@
+
+.input-group-text{
+    border: none !important;
+    background:none !important;
+
+
+}
+.form-control.is-invalid, .was-validated .form-control:invalid{
+    background: none !important;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+label{
+    font-size: 20px;
+}
+input::placeholder{
+color: red;
+}
+.form-control:focus{
+    box-shadow: none !important;
+}
