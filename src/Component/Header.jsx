@@ -2,8 +2,7 @@ import { Container, Navbar, Nav,} from 'react-bootstrap';
 import '../assets/css/header.css'
 function Header() {
   return (
-    <div>
-    <Navbar  collapseOnSelect expand="lg" className="navbar-bg py-3" fixed='top'>
+    <Navbar  collapseOnSelect expand="lg" className="navbar-bg py-4 overflow-hidden " fixed='top'>
     <Container fluid>
       <Navbar.Brand href="#home">New Website</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,7 +25,6 @@ function Header() {
     </Container>
   </Navbar>
       
-    </div>
   )
 }
 

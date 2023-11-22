@@ -8,13 +8,17 @@
     --light-color:#e9ecef;
     --primary-font:'Poppins', sans-serif;
     --secondry-font:'Roboto', sans-serif;
+    
 }
 body{
-    height: 100vh;
-    position: relative;
+    width: 100vw;
     transition: all 0.3 ease-in;    
     font-family: var(--primary-font) !important;
   scroll-behavior: smooth;
+  padding-top: 88px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
-  padding-top: 100px;
+
 }

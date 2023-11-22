@@ -4,8 +4,8 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import '../assets/css/footer.css'
 function Footer() {
     return (
-        <div className="footerbg overflow-hidden">
-            <div className="container py-sm-5 py-1">
+        <footer className="footerbg">
+            <div className="container py-sm-5 py-1 overflow-hidden">
                 <div className="row py-lg-3 py-1  justify-content-center align-items-start ">
                     <div className="col-md-6">
                         <p className='footer-about'>is simply dummy text of thprinting and typesetting ndustry.Lorem Ipsum has been the industry&apos;s stand ard dummy text ever since
@@ -23,7 +23,7 @@ function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-12">
+                    <div className="col-md-3 col-12 col-sm-6 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
                         <div className="navlinks">
                             <h5 className='nav-title'>What We Do?</h5>
                             <ul className=" list-unstyled footernav">
@@ -36,7 +36,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="subfooter position-position-relative w-100 overflow-hidden ">
+            <div className="subfooter position-relative w-100 ">
                 <div className="container">
                     <div className="row justify-content-between align-items-center ">
                         <div className="col-md-6 py-3 ">
@@ -56,7 +56,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

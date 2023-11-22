@@ -33,6 +33,7 @@ const LoginForm = () => {
                 <div className='col-lg-6 col-12'>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
+                    <h2 className="text-center my-1">Login Form</h2>
 
                         <div className="form-group my-2">
                             <label className='my-2' htmlFor="email">Email address</label>

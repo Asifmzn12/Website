@@ -36,4 +36,7 @@
 .footerbg{
     background: var(--dark-color);
     color: white;
+  margin-bottom: auto;    
+
+
 }

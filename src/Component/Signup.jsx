@@ -1,11 +1,16 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../assets/css/form.css'
 
 
 const Signup = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, control } = useForm();
+    const agreedTerms = useWatch({
+        name: 'agreedTerms',
+        control,
+        defaultValue: false, // Set a default value for the checkbox
+    });
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -17,56 +22,64 @@ const Signup = () => {
         setShowConfirmPassword(!showConfirmPassword);
     };
 
-
     const onSubmit = (data) => {
-        // Add your login logic here
-        console.log(data)
-
+        if (agreedTerms) {
+            // Proceed with registration logic
+            console.log(data);
+        } else {
+            // Display an error or alert indicating that terms and conditions must be agreed to proceed
+            console.log('Please agree to the terms and conditions');
+        }
     };
+
 
     return (
         <div className="container py-1">
+
             <div className='row py-5 shadow-lg p-3 mb-5 bg-white rounded' >
-            <div className="col-lg-6 d-none d-lg-block text-end">
-            <img src="images/Signup.jpg"
-              alt="Sample photo" className="img-fluid"
-               />
-          </div>
+                <div className="col-lg-6 d-none d-lg-block text-end">
+                    <img src="images/Signup.jpg"
+                        alt="Sample photo" className="img-fluid"
+                    />
+                </div>
                 <div className='col-lg-6 col-md-12'>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                    <label className='my-2' htmlFor="name">Name</label>
-                    <input
-                      type="text"
-                      className={`form-control ${errors.name ? 'is-invalid' : ''} py-3`}
-                      id="name"
-                      placeholder="Enter name"
-                      {...register('name', {
-                        required: 'Name is required',
-                        pattern: {
-                          value: /^[A-Za-z]+$/,
-                          message: 'Name should only contain letters',
-                        },
-                        minLength: {
-                          value: 7,
-                          message: 'Name should be at least 7 characters',
-                        },
-                        maxLength: {
-                          value: 30,
-                          message: 'Name should not exceed 30 characters',
-                        },
-                      })}
-                    />
-                    {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
-                  </div>
+                    <h2 className="text-center my-1">Signup Form</h2>
 
-                        <div className="form-group my-2">
-                            <label className='my-2' htmlFor="email">Email address</label>
+                        <div className="form-group">
+                            <label className='my-1' htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                className={`form-control ${errors.name ? 'is-invalid' : ''} py-3`}
+                                id="name"
+                                placeholder="Enter name"
+                                {...register('name', {
+                                    required: 'Name is required',
+                                    pattern: {
+                                        value: /^[A-Za-z\s]+$/,
+                                        message: 'Name should only contain letters',
+                                    },
+                                    minLength: {
+                                        value: 7,
+                                        message: 'Name should be at least 7 characters',
+                                    },
+                                    maxLength: {
+                                        value: 30,
+                                        message: 'Name should not exceed 30 characters',
+                                    },
+                                })}
+                            />
+                            {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
+                        </div>
+
+                        <div className="form-group my-1">
+                            <label className='my-1' htmlFor="email">Email address</label>
                             <input
                                 type="email"
                                 className={`form-control ${errors.email ? 'is-invalid' : ''} py-3`}
                                 id="email"
                                 placeholder="Enter email"
+
                                 {...register('email', {
                                     required: 'Email is required',
                                     pattern: {
@@ -78,8 +91,8 @@ const Signup = () => {
                             {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
                         </div>
 
-                        <div className="form-group position-relative my-2">
-                            <label className='my-2' htmlFor="password">Password</label>
+                        <div className="form-group position-relative my-1">
+                            <label className='my-1' htmlFor="password">Password</label>
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.password ? 'is-invalid' : ''} py-3`}
@@ -111,8 +124,8 @@ const Signup = () => {
 
                         </div>
 
-                        <div className="form-group my-2 position-relative">
-                            <label className='my-2' htmlFor="confirmPassword">Confirm Password</label>
+                        <div className="form-group my-1 position-relative">
+                            <label className='my-1' htmlFor="confirmPassword">Confirm Password</label>
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''} py-3`}
@@ -137,14 +150,28 @@ const Signup = () => {
                                 <div className="invalid-feedback">{errors.confirmPassword.message}</div>
                             )}
                         </div>
-                        <div className='row justify-content-center align-items-start'>
-                        <div className='col-12 col-md-4'>                    
-                          <button type="submit" className="btn btn-primary my-3 py-2 px-5 fw-semibold">
-                            Register
-                        </button>
-                        </div>  
-                        <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                        className="fw-bold text-body"><u>Login here</u></a></p>
+
+                        <div className="form-check mt-3">
+                            <input
+                                type="checkbox"
+                                className={`form-check-input ${errors.agreedTerms ? 'is-invalid' : ''}`}
+                                id="agreedTerms"
+                                {...register('agreedTerms', { required: 'Required' })}
+                            />
+                            <label className="form-check-label" htmlFor="agreedTerms">
+                                I agree to the terms and conditions
+                            </label>
+                            {errors.agreedTerms && <div className="invalid-feedback">{errors.agreedTerms.message}</div>}
+                        </div>
+
+                        <div className='row justify-content-start justify-content-lg-center align-items-start'>
+                            <div className='col-12 col-md-4'>
+                                <button type="submit" className="btn btn-primary my-3 py-2 px-5 fw-semibold">
+                                    Register
+                                </button>
+                            </div>
+                            <p className="text-start text-lg-center text-muted mt-1 mb-0">Have already an account? <a href="#!"
+                                className="fw-bold text-body"><u>Login here</u></a></p>
                         </div>
 
                     </form>
