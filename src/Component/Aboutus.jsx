@@ -5,7 +5,6 @@ import '../assets/css/about.css';
 
 function Aboutus() {
     const data=useUserContext()
-    console.log(data);
   return (
     <>
       <div className="container-fluid">
