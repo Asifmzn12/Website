@@ -5,7 +5,7 @@ import '../assets/css/footer.css'
 function Footer() {
     return (
         <footer className="footerbg">
-            <div className="container py-sm-5 py-1 overflow-hidden">
+            <div className="container py-5 overflow-hidden">
                 <div className="row py-lg-3 py-1  justify-content-center align-items-start ">
                     <div className="col-md-6">
                         <p className='footer-about'>is simply dummy text of thprinting and typesetting ndustry.Lorem Ipsum has been the industry&apos;s stand ard dummy text ever since
@@ -37,7 +37,7 @@ function Footer() {
             </div>
 
             <div className="subfooter position-relative w-100 ">
-                <div className="container">
+                <div className="container py-3">
                     <div className="row justify-content-between align-items-center ">
                         <div className="col-md-6 py-3 ">
                             <p className='subfooter-text text-lg-start text-center' >© Copyright 2023 Asif Ali</p>

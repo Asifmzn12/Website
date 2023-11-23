@@ -1,0 +1,22 @@
+.info{
+    background: rgba(33,37,41, 0.03);
+}
+.info svg{
+color:#ff0000;
+}
+.address-content p{
+    padding: 0 !important;
+    margin: 0;
+}
+.form-control{
+    border: none;
+    border-radius: 1px;
+    border-bottom: 2px solid #dee2e6;
+}
+.form-control:focus{
+    box-shadow: none;
+
+}
+.form-control.is-invalid:focus{
+    box-shadow: none;
+}

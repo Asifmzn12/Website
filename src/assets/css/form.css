@@ -18,6 +18,18 @@ label{
 input::placeholder{
 color: red;
 }
+.form-control{
+    border: none;
+    border-radius: 1px;
+    border-bottom: 2px solid #dee2e6;
+}
 .form-control:focus{
-    box-shadow: none !important;
+    box-shadow: none;
+
+}
+.form-control.is-invalid:focus{
+    box-shadow: none;
+}
+.top-50{
+    top: 25% !important;
 }

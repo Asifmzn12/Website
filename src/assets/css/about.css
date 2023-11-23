@@ -16,3 +16,12 @@ filter: grayscale(0);
     opacity: 1;
     transition: all 0.2s ease-in;
 }
+.aboutus{
+    width: 100%;
+    height: 400px !important;
+    max-height: 600px;
+}
+p{
+    font-size: 25px;
+    line-height: 36px;
+}

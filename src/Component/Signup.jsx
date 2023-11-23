@@ -34,7 +34,7 @@ const Signup = () => {
 
 
     return (
-        <div className="container py-1">
+        <div className="container py-1 py-lg-5">
 
             <div className='row py-5 shadow-lg p-3 mb-5 bg-white rounded' >
                 <div className="col-lg-6 d-none d-lg-block text-end">
@@ -46,8 +46,7 @@ const Signup = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <h2 className="text-center my-1">Signup Form</h2>
 
-                        <div className="form-group">
-                            <label className='my-1' htmlFor="name">Name</label>
+                        <div className="form-group my-4">
                             <input
                                 type="text"
                                 className={`form-control ${errors.name ? 'is-invalid' : ''} py-3`}
@@ -72,8 +71,7 @@ const Signup = () => {
                             {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
                         </div>
 
-                        <div className="form-group my-1">
-                            <label className='my-1' htmlFor="email">Email address</label>
+                        <div className="form-group my-4">
                             <input
                                 type="email"
                                 className={`form-control ${errors.email ? 'is-invalid' : ''} py-3`}
@@ -91,8 +89,7 @@ const Signup = () => {
                             {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
                         </div>
 
-                        <div className="form-group position-relative my-1">
-                            <label className='my-1' htmlFor="password">Password</label>
+                        <div className="form-group position-relative my-4">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.password ? 'is-invalid' : ''} py-3`}
@@ -124,8 +121,7 @@ const Signup = () => {
 
                         </div>
 
-                        <div className="form-group my-1 position-relative">
-                            <label className='my-1' htmlFor="confirmPassword">Confirm Password</label>
+                        <div className="form-group my-4 position-relative">
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''} py-3`}
@@ -151,7 +147,7 @@ const Signup = () => {
                             )}
                         </div>
 
-                        <div className="form-check mt-3">
+                        <div className="form-check my-4">
                             <input
                                 type="checkbox"
                                 className={`form-check-input ${errors.agreedTerms ? 'is-invalid' : ''}`}
@@ -164,13 +160,13 @@ const Signup = () => {
                             {errors.agreedTerms && <div className="invalid-feedback">{errors.agreedTerms.message}</div>}
                         </div>
 
-                        <div className='row justify-content-start justify-content-lg-center align-items-start'>
+                        <div className='row mt-4 justify-content-start justify-content-lg-center align-items-start'>
                             <div className='col-12 col-md-4'>
-                                <button type="submit" className="btn btn-primary my-3 py-2 px-5 fw-semibold">
+                                <button type="submit" className="btn btn-primary  py-2 px-5 fw-semibold">
                                     Register
                                 </button>
                             </div>
-                            <p className="text-start text-lg-center text-muted mt-1 mb-0">Have already an account? <a href="#!"
+                            <p className="text-start text-lg-center text-muted mt-4 mb-0">Have already an account? <a href="#!"
                                 className="fw-bold text-body"><u>Login here</u></a></p>
                         </div>
 

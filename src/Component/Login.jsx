@@ -25,7 +25,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="container py-1">
+        <div className="container py-5">
             <div className='row py-5 justify-content-center align-items-center shadow-lg p-3 mb-5 bg-white rounded'>
                 <div className='col-lg-6 my-2 d-none d-lg-block'>
                     <img src='images/login.jpg' className='img-fluid my-2'></img>
@@ -33,11 +33,10 @@ const LoginForm = () => {
                 <div className='col-lg-6 col-12'>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <h2 className="text-center my-1">Login Form</h2>
+                    <h2 className="text-md-center my-1">Welcome Back</h2>
 
-                        <div className="form-group my-2">
-                            <label className='my-2' htmlFor="email">Email address</label>
-                            <input
+                        <div className="form-group my-4">
+                        <input
                                 type="email"
                                 className={`form-control ${errors.email ? 'is-invalid' : ''} py-3`}
                                 id="email"
@@ -53,8 +52,7 @@ const LoginForm = () => {
                             {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
                         </div>
 
-                        <div className="form-group position-relative my-2">
-                            <label className='my-2' htmlFor="password">Password</label>
+                        <div className="form-group position-relative my-4">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.password ? 'is-invalid' : ''} py-3`}
@@ -86,9 +84,8 @@ const LoginForm = () => {
 
                         </div>
 
-                        <div className="form-group my-2 position-relative">
-                            <label className='my-2' htmlFor="confirmPassword">Confirm Password</label>
-                            <input
+                        <div className="form-group my-4 position-relative">
+                           <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''} py-3`}
                                 id="confirmPassword"

@@ -4,10 +4,11 @@ import './App.css'
 import { UserProvider } from "./config/Usercontext";
 
 import Footer from "./Component/Footer";
-// import Signup from "./Component/Signup";
-// import LoginForm from "./Component/Login";
+import Contactus from "./Component/Contactus";
+import Signup from "./Component/Signup";
+import LoginForm from "./Component/Login";
 // import Home from "./Component/Home";
-import Aboutus from "./Component/Aboutus";
+// import Aboutus from "./Component/Aboutus";
 // import Login from "./Component/Login";
 
 
@@ -17,7 +18,7 @@ function App() {
       <UserProvider>
 
         <Header/>
-        <Aboutus/>
+        <Contactus/>
         <Footer/>
         </UserProvider>  )
 }
