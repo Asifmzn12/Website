@@ -1,15 +1,16 @@
 import { useUserContext } from '../config/Usercontext';
-
+import Images from './ImageApi';
 import Marquee from 'react-fast-marquee';
 import '../assets/css/about.css';
 
 function Aboutus() {
+  
     const data = useUserContext()
     if (data.length === 0) {
         return null
     }
    
-  
+ 
     return (
         <>
             <div className="container-fluid">
@@ -48,14 +49,14 @@ function Aboutus() {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row py-2 text-center">
                         <h2 className="my-4">Our Trusted Partners</h2>
                         <Marquee className="">
-                            {data.map((data, index) => (
-                                <div key={index} className="mx-2">
+                             { Images && Images.map((image, index) => (
+                                <div key={index} className="mx-1">
                                     <div className=" py-4">
-                                        <img src="images/ibm.png" className="card-image" alt={data.name} />
+                                        <img src={image.path} className="card-image" alt={data.name} />
                                     </div>
                                 </div>
                             ))}
