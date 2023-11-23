@@ -5,3 +5,14 @@
 .custom-card{
     height: 230px;
 }
+.card-image{
+    max-width: 50%;
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: all 0.2s ease-in;
+}
+.card-image:hover{
+filter: grayscale(0);
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}

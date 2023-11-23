@@ -1,47 +1,48 @@
-import { useEffect, useState } from 'react';
+import { useUserContext } from '../config/Usercontext';
+
+import Marquee from 'react-fast-marquee';
 import '../assets/css/about.css';
 
 function Aboutus() {
-    const [user, setUser] = useState([]);
-
-    useEffect(() => {
-
-        const fetchData = async () => {
-            try {
-                console.log("...loading");
-                const userData = await fetch("https://jsonplaceholder.typicode.com/users");
-                const result = await userData.json();
-                setUser(result);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-    console.log(user);
-    return (
-        <div className='container py-4'>
-            <div className='row'>
-                {
-                    user.map((data, index) => (
-
-                        <div key={index} className=' col-xl-3 col-12 gy-4'>
-                            <div className="card align-items-center">
-                                <div className="card-body">
-                                    <h5 className="card-title">{data.name}</h5>
-                                    <h6 className="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
+    const data=useUserContext()
+    console.log(data);
+  return (
+    <>
+      <div className="container-fluid">
+        <div className="container">
+          <div className="row py-2">
+            <h2 className="my-4 text-center">Our Teams</h2>
+            {data.map((data, index) => (
+                <div key={index} className="col-md-4 col-lg- col-sm-6 col-12 gy-4">
+                  <div className="card">
+                    <img src={data.image} className=" img-fluid" alt="..." />
+                    <div className="card-body">
+                      <h5 className="card-title">{data.name}</h5>
+                      <p className="card-text">{data.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
-    );
+
+        <div className="container">
+          <div className="row py-2 text-center">
+            <h2 className="my-4">Our Trusted Partners</h2>
+            <Marquee className="">
+              {data.map((data, index) => (
+                <div key={index} className="mx-2">
+                  <div className=" py-4">
+                    <img src="images/ibm.png" className="card-image" alt={data.name} />
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Aboutus;
