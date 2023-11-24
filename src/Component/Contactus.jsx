@@ -22,7 +22,7 @@ const Contactus = () => {
         <div className="container">
         <div className="row py-5 Contactus position-relative justify-content-center align-items-center ">
           <div className="col-md-6 col-xl-9">
-            <div className="d-flex flex-column gap-4">
+            <div className="d-flex flex-column gap-2">
               <p>How can we help you?</p>
               <h2>Contact us</h2>
               <p>
@@ -167,7 +167,7 @@ const Contactus = () => {
                 <div className="col-md-4 text-start">
                   <button
                     type="submit"
-                    className="btn btn-primary mt-1 py-2 px-5  fw-semibold"
+                    className="btn btn-primary mt-1 py-2 px-5 mx-2 mx-md-0 fw-semibold"
                   >
                     Send
                   </button>
