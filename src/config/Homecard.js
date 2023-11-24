@@ -1,7 +1,7 @@
 export const boxes = [
     {
         type: 'image',
-        content: 'images/Home-bg.png'
+        content: 'images/pic1.jpg'
     },
     {
         type: 'text',
@@ -20,11 +20,11 @@ export const boxes = [
     },
     {
         type: 'image',
-        content: 'images/Home-bg.png'
+        content: 'images/pic2.jpg'
     },
     {
         type: 'image',
-        content: 'images/Home-bg.png'
+        content: 'images/pic3.jpg'
     },
     {
         type: 'text',

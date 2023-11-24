@@ -2,6 +2,7 @@ import { useForm, useWatch } from 'react-hook-form';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import '../assets/css/form.css'
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -166,8 +167,8 @@ const Signup = () => {
                                     Register
                                 </button>
                             </div>
-                            <p className="text-start text-lg-center text-muted mt-4 mb-0">Have already an account? <a href="#!"
-                                className="fw-bold text-body"><u>Login here</u></a></p>
+                            <p className="text-start text-lg-center text-muted mt-4 mb-0">Have already an account? <Link to='/login'
+                                className="fw-bold text-body"><u>Login here</u></Link></p>
                         </div>
 
                     </form>

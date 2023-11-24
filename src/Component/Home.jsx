@@ -10,14 +10,14 @@ import 'swiper/css/scrollbar';
 import "../assets/css/home.css"
 import { boxes } from '../config/Homecard';
 const Box = ({ type, content }) => {
+  console.log();
   if (type === 'image') {
-    return <img src={content} alt="Box Image" className='img-fluid' />;
+    return <img src={content} alt="Box Image" className='img-fluid rounded' />;
   } else if (type === 'text') {
     return <div>
       <h2>{content.title}</h2>
       <p>{content.para}</p>
     </div>
-
   }
 
   return null;
@@ -26,7 +26,6 @@ const Box = ({ type, content }) => {
 
 
 function Home() {
-
   return (
     <>
       <section id="hero">
@@ -51,7 +50,7 @@ function Home() {
       </section>
 
       <div className='container my-5'>
-        <div className="row sectionbox justify-content-center align-items-center">
+        <div className="row py-1 py-lg-5 sectionbox justify-content-center align-items-center gy-5">
           {boxes.map((box, index) => (
             <div key={index} className="col-md-6 ">
               <Box type={box.type} content={box.content} />
