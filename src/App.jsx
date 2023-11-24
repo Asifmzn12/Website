@@ -1,27 +1,33 @@
-import Header from "./Component/Header"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-import { UserProvider } from "./config/Usercontext";
-
-import Footer from "./Component/Footer";
-import Contactus from "./Component/Contactus";
-import Signup from "./Component/Signup";
-import LoginForm from "./Component/Login";
-import Home from "./Component/Home";
-import Aboutus from "./Component/Aboutus";
-
-
-
+import './App.css';
+import { UserProvider } from './config/Usercontext';
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+import Contactus from './Component/Contactus';
+import Signup from './Component/Signup';
+import LoginForm from './Component/Login';
+import Home from './Component/Home';
+import Aboutus from './Component/Aboutus';
+import ScrollToTop from './Component/ScrollToTop';
 function App() {
   return (
-      <UserProvider>
-
-        <Header/>
-        <Home/>
-       
-        <Footer/>
-        </UserProvider>  
-  )
+    <UserProvider>
+      <BrowserRouter>
+        <Header />
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/contact" element={<Contactus />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<LoginForm />} />
+          </Routes>
+        </ScrollToTop>
+        <Footer />
+      </BrowserRouter>
+    </UserProvider>
+  );
 }
 
-export default App
+export default App;

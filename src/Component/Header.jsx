@@ -1,31 +1,40 @@
-import { Container, Navbar, Nav,} from 'react-bootstrap';
-import '../assets/css/header.css'
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; 
+import '../assets/css/header.css';
+
 function Header() {
   return (
-    <Navbar  collapseOnSelect expand="lg" className="navbar-bg py-4 overflow-hidden " fixed='top'>
-    <Container fluid>
-      <Navbar.Brand href="#home">New Website</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ms-auto">
-          <Nav.Link  href="#features">Home</Nav.Link>
-          <Nav.Link href="#pricing">About</Nav.Link>
-          <Nav.Link href="#pricing">Portfolio</Nav.Link>
-          <Nav.Link href="#pricing">Contact</Nav.Link>
-          <Nav.Link className='signupBtn me-2 my-2 my-lg-0' href="#pricing">Sign Up</Nav.Link>
-          <Nav.Link className='loginBtn ms- lg-2 ' href="#pricing">Login</Nav.Link>
-
-
-
-
-
-        </Nav>
-
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-      
-  )
+    <Navbar collapseOnSelect expand="lg" className="navbar-bg py-4 overflow-hidden" fixed="top">
+      <Container fluid>
+        <Navbar.Brand as={Link} to="#home">
+          New Website
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="about">
+              About
+            </Nav.Link>
+            <Nav.Link as={Link} to="portfolio">
+              Portfolio
+            </Nav.Link>
+            <Nav.Link as={Link} to="contact">
+              Contact
+            </Nav.Link>
+            <Nav.Link as={Link} to="signup" key="signup" className="signupBtn me-2 my-2 my-lg-0">
+              Sign Up
+            </Nav.Link>
+            <Nav.Link as={Link} to="login" key="login" className="loginBtn ms-lg-2">
+              Login
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Header
+export default Header;

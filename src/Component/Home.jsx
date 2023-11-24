@@ -60,7 +60,24 @@ function Home() {
         </div>
 
 
+
       </div>
+      <div className='container my-5'>
+      <div className="row sectionbox justify-content-center align-items-center">
+        {[1,2,3,4].map((_,index) => (
+          <div key={index} className="col-md-3 gy-3 ">
+          <div className='card p-3'>
+          <p>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quaerat officiis corporis eligendi, doloremque vitae fuga dignissimos blanditiis dolor nemo!</p>
+          
+          </div>
+         
+          </div>
+        ))}
+      </div>
+
+
+
+    </div>
     </>
 
 
