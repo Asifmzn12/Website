@@ -17,10 +17,11 @@ const Contactus = () => {
   console.log(contactApi);
 
   return (
-    <div className="container-fluid">
-      <div className=" position-relative ">
-        <div className="row py-3 Contactus position-relative justify-content-center align-items-center ">
-          <div className="col-md-6">
+    <div className="container-fluid contact-section g-0">
+    <div className=" container-fluid bg-wheat g-0">
+        <div className="container">
+        <div className="row py-5 Contactus position-relative justify-content-center align-items-center ">
+          <div className="col-md-6 col-xl-9">
             <div className="d-flex flex-column gap-4">
               <p>How can we help you?</p>
               <h2>Contact us</h2>
@@ -38,10 +39,11 @@ const Contactus = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-3 top-section">
+          <div className="col-md-6 col-lg-4 col-xl-3 top-section">
             <img src="images/contactus.webp" className="img-fluid"></img>
           </div>
         </div>
+      </div>
       </div>
       <div className=" container-lg py-lg-5 container-fluid">
         <div className="row my-2 py-3  shadow-lg  bg-white rounded">

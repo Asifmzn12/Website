@@ -18,10 +18,7 @@ function App() {
 
         <Header/>
         <Home/>
-        <Aboutus/>
-        <Signup/>
-        <LoginForm/>
-        <Contactus/>
+       
         <Footer/>
         </UserProvider>  
   )

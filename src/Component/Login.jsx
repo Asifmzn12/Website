@@ -110,13 +110,13 @@ const LoginForm = () => {
                             )}
                         </div>
                         <div className='row flex-column flex-md-row justify-content-center align-items-center'>
-                            <div className='col-md-4 text-center text-md-start'>
+                            <div className='col-md-4 text-start text-md-center'>
                                 <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold">
                                     Submit
                                 </button>
                             </div>
                             <div className='col-12 col-md-8'>
-                                <div className=" d-flex  justify-content-center align-items-center gap-3" >
+                                <div className=" d-flex  justify-content-start justify-content-md-center align-items-center gap-3" >
                                     <p className='fw-semibold text-muted'>Login with: </p>
                                     <button type="button" className="btn btn-outline-primary">
                                         <FaFacebook />

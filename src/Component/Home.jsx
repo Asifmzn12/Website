@@ -1,78 +1,69 @@
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
+
 // Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "../assets/css/home.css"
-import { useState,useEffect } from 'react';
+import { boxes } from '../config/Homecard';
+const Box = ({ type, content }) => {
+  if (type === 'image') {
+    return <img src={content} alt="Box Image" className='img-fluid' />;
+  } else if (type === 'text') {
+    return <div>
+      <h2>{content.title}</h2>
+      <p>{content.para}</p>
+    </div>
+
+  }
+
+  return null;
+};
+
+
 
 function Home() {
-const [slidercount,setSliderCount]=useState([])
-  useEffect(() => {
-
-      const fetchData = async () => {
-          try {
-              console.log("...loading");
-              const userData = await fetch("https://jsonplaceholder.typicode.com/users");
-              const result = await userData.json();
-              setSliderCount(result);
-          } catch (error) {
-              console.error("Error fetching data:", error);
-          }
-      };
-
-      fetchData();
-  }, []);
 
   return (
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      spaceBetween={0}
-      slidesPerView={1}
-      navigation
-      pagination={{
-        clickable: true,
+    <>
+      <section id="hero">
 
-      }}
-      autoplay={{ delay: 3000 }}      
-      
+        <div className="container my-5">
+          <div className="row justify-content-between">
+            <div className="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+              <div className='d-flex flex-column gap-md-3 gap-0'>
+                <h1>We design digital products that help grow businesses</h1>
+                <h2>We are team of talented designers making websites with Bootstrap</h2>
+                <div className="text-center text-lg-start">
+                  <a href="#about" className="btn-get-started scrollto">Get Started</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-5 order-1 order-lg-2 hero-img">
+              <img src="images/Home-bg.png" className="img-fluid animated" alt="" />
+            </div>
+          </div>
+        </div>
 
-    >
-      <div className='container-fluid overflow-hidden'>
-{
-  slidercount.map((data,id)=>(
-<div key={id}>
-<SwiperSlide className=" w-100 position-relative overflow-hidden">
-<img
-  src="images/Nature.jpg"
-  className="img-fluid"
+      </section>
 
-/>
-<div className="row position-absolute top-0 h-100 justify-content-center align-items-start align-items-md-center w-100 text-white p-5">
-  <div className="col-12 d-flex flex-column justify-content-start justify-content-md-center align-items-start align-items-md-center overflow-hidden">
-    <h4 className="text-white fw-semibold">Lorem, ipsum.</h4>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dolor?</p>
-  </div>
-</div>
-</SwiperSlide>
-
+      <div className='container my-5'>
+        <div className="row sectionbox justify-content-center align-items-center">
+          {boxes.map((box, index) => (
+            <div key={index} className="col-md-6 ">
+              <Box type={box.type} content={box.content} />
+            </div>
+          ))}
+        </div>
 
 
-</div>
-
-
-  ))
-}
-
-      
-      
-
-       
       </div>
-    </Swiper>
+    </>
+
+
   )
 }
 export default Home
