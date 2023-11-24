@@ -13,9 +13,9 @@ function Footer() {
 
                         </p>
                     </div>
-                    <div className="col-md-3 col-12 col-sm-6 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
+                    <div className="col-md-3 col-12 col-sm-6 mt-3 mt-md-0 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
                         <div className="navlinks">
-                            <h5 className='nav-title'>What We Do?</h5>
+                            <h5 className='nav-title'>About</h5>
                             <ul className=" list-unstyled footernav" >
                                 <h5>Lorem ipsum</h5>
                                 <h5>Lorem ipsum</h5>
@@ -23,9 +23,9 @@ function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-12 col-sm-6 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
+                    <div className="col-md-3 col-12 mt-3 mt-md-0 col-sm-6 d-flex flex-column justify-content-center align-items-start align-items-lg-center">
                         <div className="navlinks">
-                            <h5 className='nav-title'>What We Do?</h5>
+                            <h5 className='nav-title'>Service</h5>
                             <ul className=" list-unstyled footernav">
                                 <h5>Lorem ipsum</h5>
                                 <h5>Lorem ipsum</h5>
