@@ -3,18 +3,26 @@
     border-radius: 5px;
     width: 120px;
     text-align: center;
-    margin: 0 !important;
     
 }
+
 .navbar-nav a{
-    margin: 0 15px;
+    color: white !important;
     font-weight: 600;
-    color: white;
 }
+@media screen and (min-width:992px) {
+    .navbar-nav a{
+        margin: 0 10px;
+    }
+}
+
 .navbar-bg{
     background-color: var(--dark-color) !important;
     color: white !important;
 }
 .navbar-brand{
     color:white !important
+}
+.navbar-toggler{
+    background-color: white !important;
 }
