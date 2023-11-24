@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import { FaEye, FaEyeSlash,FaFacebook,FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaFacebook, FaGoogle } from 'react-icons/fa';
 import '../assets/css/form.css'
 
 
@@ -33,10 +33,10 @@ const LoginForm = () => {
                 <div className='col-lg-6 col-12'>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <h2 className="text-md-center my-1">Welcome Back</h2>
+                        <h2 className="text-md-center my-1">Welcome Back</h2>
 
                         <div className="form-group my-4">
-                        <input
+                            <input
                                 type="email"
                                 className={`form-control ${errors.email ? 'is-invalid' : ''} py-3`}
                                 id="email"
@@ -85,7 +85,7 @@ const LoginForm = () => {
                         </div>
 
                         <div className="form-group my-4 position-relative">
-                           <input
+                            <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''} py-3`}
                                 id="confirmPassword"
@@ -110,26 +110,28 @@ const LoginForm = () => {
                             )}
                         </div>
                         <div className='row flex-column flex-md-row justify-content-center align-items-center'>
-                        <div className='col-md-4 text-center text-md-start'>                    
-                          <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold">
-                            Submit
-                        </button>
-                        </div>  
-                        <div className='col-12 col-md-8'>
-                            <div className=" d-flex  justify-content-center align-items-center gap-3" >
-                                <p className='h5'>Or Login with: </p>
-                                <button type="button" className="btn btn-outline-primary">
-                                <FaFacebook/>                        
-                               </button>
-                               
-                            
-
-                                <button type="button" className="btn btn-outline-danger mx-2">
-                                <FaGoogle/>
+                            <div className='col-md-4 text-center text-md-start'>
+                                <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold">
+                                    Submit
                                 </button>
-                                {/* Add more social login buttons as needed */}
                             </div>
+                            <div className='col-12 col-md-8'>
+                                <div className=" d-flex  justify-content-center align-items-center gap-3" >
+                                    <p className='fw-semibold text-muted'>Login with: </p>
+                                    <button type="button" className="btn btn-outline-primary">
+                                        <FaFacebook />
+                                    </button>
+                                    <button type="button" className="btn btn-outline-danger mx-2">
+                                        <FaGoogle />
+                                    </button>
+                                    {/* Add more social login buttons as needed */}
+                                </div>
                             </div>
+                         <div>
+                         <p className="text-start text-muted mt-4 mb-0">Forget Password <a href="#!"
+                         className="fw-bold text-body"><u> Reset </u></a></p>
+                         </div>
+
                         </div>
 
                     </form>

@@ -7,9 +7,8 @@ import Footer from "./Component/Footer";
 import Contactus from "./Component/Contactus";
 import Signup from "./Component/Signup";
 import LoginForm from "./Component/Login";
-// import Home from "./Component/Home";
-// import Aboutus from "./Component/Aboutus";
-// import Login from "./Component/Login";
+import Home from "./Component/Home";
+import Aboutus from "./Component/Aboutus";
 
 
 
@@ -18,9 +17,14 @@ function App() {
       <UserProvider>
 
         <Header/>
+        <Home/>
+        <Aboutus/>
+        <Signup/>
+        <LoginForm/>
         <Contactus/>
         <Footer/>
-        </UserProvider>  )
+        </UserProvider>  
+  )
 }
 
 export default App

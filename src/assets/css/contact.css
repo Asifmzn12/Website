@@ -20,3 +20,18 @@ color:#ff0000;
 .form-control.is-invalid:focus{
     box-shadow: none;
 }
+.Contactus{
+content: "";
+position: absolute;
+top: 0;
+right:0;
+left:0;
+background:wheat; 
+}
+.social-icons .icons{
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-weight: bold;
+    
+}

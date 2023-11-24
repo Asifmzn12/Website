@@ -1,4 +1,3 @@
-import {useState,useEffect} from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -7,10 +6,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "../assets/css/home.css"
+import { useState,useEffect } from 'react';
 
 function Home() {
-  const [sliderCount, setSliderCount] = useState([]);
-
+const [slidercount,setSliderCount]=useState([])
   useEffect(() => {
 
       const fetchData = async () => {
@@ -27,7 +26,6 @@ function Home() {
       fetchData();
   }, []);
 
-  console.log(sliderCount);
   return (
     <Swiper
       // install Swiper modules
@@ -38,27 +36,39 @@ function Home() {
       pagination={{
         clickable: true,
 
-      }
-      }
-      Autoplay={true}
+      }}
+      autoplay={{ delay: 3000 }}      
+      
 
     >
       <div className='container-fluid overflow-hidden'>
-      {
-        sliderCount.map((data,index)=>(
-          <SwiperSlide className="position-relative overflow-hidden" key={index}>
-          <img src='images/Nature.jpg' className='img-fluid'></img>
-          <div className='row position-absolute top-0 h-100 justify-content-center align-items-start align-items-md-center w-100 text-white p-5 '>
-            <div className='col-12 d-flex flex-column justify-content-center align-items-center  overflow-hidden'>
-              <h4 className='text-white fw-semibold'>Lorem, ipsum.</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dolor?</p>
-            </div>
+{
+  slidercount.map((data,id)=>(
+<div key={id}>
+<SwiperSlide className=" w-100 position-relative overflow-hidden">
+<img
+  src="images/Nature.jpg"
+  className="img-fluid"
+
+/>
+<div className="row position-absolute top-0 h-100 justify-content-center align-items-start align-items-md-center w-100 text-white p-5">
+  <div className="col-12 d-flex flex-column justify-content-start justify-content-md-center align-items-start align-items-md-center overflow-hidden">
+    <h4 className="text-white fw-semibold">Lorem, ipsum.</h4>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, dolor?</p>
+  </div>
+</div>
+</SwiperSlide>
 
 
-          </div>
-        </SwiperSlide>
-        ))
-      }
+
+</div>
+
+
+  ))
+}
+
+      
+      
 
        
       </div>
