@@ -11,6 +11,10 @@
     --background-color: #f4f4f4;    
     --text-color:#32353a;
     --text2-color:33, 37, 41;
+    --icon-bg:232, 69, 69;
+    --icon-color:#e84545;
+
+
 }
 body{
     width: 100vw;
