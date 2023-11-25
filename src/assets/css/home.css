@@ -33,7 +33,7 @@
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-    background-image: url(images/hero-bg.png);
+    background-image: url(public/images/hero-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right top;
