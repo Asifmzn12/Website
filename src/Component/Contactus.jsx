@@ -18,32 +18,32 @@ const Contactus = () => {
 
   return (
     <div className="container-fluid contact-section g-0">
-    <div className=" container-fluid bg-wheat g-0">
+      <div className=" container-fluid bg-wheat g-0">
         <div className="container">
-        <div className="row py-5 Contactus position-relative justify-content-center align-items-center ">
-          <div className="col-md-6 col-xl-9">
-            <div className="d-flex flex-column gap-2">
-              <p>How can we help you?</p>
-              <h2>Contact us</h2>
-              <p>
-                We’re here to help and answer any questions you <br></br> might
-                have. We look forward to hearing from you!{" "}
-              </p>
-              <p className=" fw-bold">Follow us</p>
-              <div className="social-icons d-flex">
-                {socialIcons.map((Social, index) => (
-                  <span key={index} className=" d-inline-block me-4 icons">
-                    <Social.icons size={20} />
-                  </span>
-                ))}
+          <div className="row py-5 Contactus position-relative justify-content-center align-items-center ">
+            <div className="col-md-6 col-xl-9">
+              <div className="d-flex flex-column gap-2">
+                <p>How can we help you?</p>
+                <h2>Contact us</h2>
+                <p>
+                  We’re here to help and answer any questions you <br></br> might
+                  have. We look forward to hearing from you!{" "}
+                </p>
+                <p className=" fw-bold">Follow us</p>
+                <div className="social-icons d-flex">
+                  {socialIcons.map((Social, index) => (
+                    <span key={index} className=" d-inline-block me-4 icons scale">
+                      <Social.icons size={20} />
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-6 col-lg-4 col-xl-3 top-section">
-            <img src="images/contactus.webp" className="img-fluid"></img>
+            <div className="col-md-6 col-lg-4 col-xl-3 top-section">
+              <img src="images/contactus.webp" className="img-fluid vert-move"></img>
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <div className=" container-lg py-lg-5 container-fluid">
         <div className="row my-2 py-3  shadow-lg  bg-white rounded">
@@ -51,7 +51,7 @@ const Contactus = () => {
             <div className="row gy-3 py-4 ">
               {contactApi.map((data) => (
                 <div key={data.id} className="col-lg-6 col-md-6 gap-1   ">
-                  <div className="card info p-3 p-md-1 p-xl-4 p-lg-1 p-md-3">
+                  <div className="card info p-3 p-md-1 p-xl-4 p-lg-1 p-md-3 hover">
                     <data.icons size={40} />
                     <div className="my-2 address-content d-flex flex-column gap-2">
                       <h4>{data.title}</h4>
@@ -70,9 +70,8 @@ const Contactus = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  className={`form-control ${
-                    errors.name ? "is-invalid" : ""
-                  } py-3`}
+                  className={`form-control ${errors.name ? "is-invalid" : ""
+                    } py-3`}
                   id="name"
                   placeholder="Enter your name"
                   {...register("name", {
@@ -100,9 +99,8 @@ const Contactus = () => {
               <div className="form-group my-4">
                 <input
                   type="email"
-                  className={`form-control ${
-                    errors.email ? "is-invalid" : ""
-                  } py-3`}
+                  className={`form-control ${errors.email ? "is-invalid" : ""
+                    } py-3`}
                   id="email"
                   placeholder="Enter email"
                   {...register("email", {
@@ -121,9 +119,8 @@ const Contactus = () => {
               <div className="form-group my-4">
                 <input
                   type="text"
-                  className={`form-control ${
-                    errors.subject ? "is-invalid" : ""
-                  } py-3`}
+                  className={`form-control ${errors.subject ? "is-invalid" : ""
+                    } py-3`}
                   id="subject"
                   placeholder="Enter your Subject"
                   {...register("subject", {
@@ -143,9 +140,8 @@ const Contactus = () => {
 
               <div className="form-group my-4">
                 <textarea
-                  className={`form-control ${
-                    errors.message ? "is-invalid" : ""
-                  } py-3`}
+                  className={`form-control ${errors.message ? "is-invalid" : ""
+                    } py-3`}
                   id="message"
                   placeholder="Enter your message"
                   {...register("message", {
@@ -167,7 +163,7 @@ const Contactus = () => {
                 <div className="col-md-4 text-start">
                   <button
                     type="submit"
-                    className="btn btn-primary mt-1 py-2 px-5 mx-2 mx-md-0 fw-semibold"
+                    className="btn btn-primary mt-1 py-2 px-5 mx-2 mx-md-0 fw-semibold scale"
                   >
                     Send
                   </button>

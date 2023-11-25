@@ -66,6 +66,15 @@
   margin-bottom: 30px;
   font-size: 24px;
 }
+
+#hero h1{
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  
+}
+
 @media only screen and (max-width:767px){
   #hero h1{
   font-size: 30px;

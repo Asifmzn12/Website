@@ -10,6 +10,9 @@ import LoginForm from './Component/Login';
 import Home from './Component/Home';
 import Aboutus from './Component/Aboutus';
 import ScrollToTop from './Component/ScrollToTop';
+import AOS from 'aos';
+// ..
+AOS.init();
 function App() {
   return (
     <UserProvider>

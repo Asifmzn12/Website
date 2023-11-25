@@ -30,4 +30,38 @@ h2{
 h4{
     margin-bottom: 0;
 }
+.vert-move {
+    animation: mover 1s infinite alternate;
+  }
+  @keyframes mover {
+    0%{
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+  }
+    
+  }
+  
+  .hover{
+    transition: all 0.2s ease-in;
+  }
+  .hover:hover{
+    transform: translateY(-10px);
+  }
+  .scale{
+    transition: all 0.2s ease-in;
+  
+  }
+  .scale:hover{
+    transform: scale(0.9);
+  }
+  .underline{
+    transition: all 0.2s ease-in;
+  
+  }
+  .underline:hover{
+    text-decoration: underline !important;
+  }
+  
 

@@ -12,13 +12,13 @@ import {
 } from "swiper/modules";
 import "swiper/css/pagination";
 import "../assets/css/home.css";
-import { FaStar, FaQuoteLeft, FaQuoteRight,FaBuilding } from "react-icons/fa";
+import { FaStar, FaQuoteLeft, FaQuoteRight, FaBuilding } from "react-icons/fa";
 
 import { boxes } from "../config/Homecard";
 const Box = ({ type, content }) => {
   console.log();
   if (type === "image") {
-    return <img src={content} alt="Box Image" className="img-fluid rounded" />;
+    return <img src={content} alt="Box Image" className="img-fluid rounded hover" />;
   } else if (type === "text") {
     return (
       <div>
@@ -37,7 +37,7 @@ function Home() {
       <section id="hero">
         <div className="container my-5">
           <div className="row justify-content-between">
-            <div className="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+            <div className="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="20" >
               <div className="d-flex flex-column gap-md-3 gap-0">
                 <h1>We design digital products that help grow businesses</h1>
                 <h2>
@@ -45,16 +45,16 @@ function Home() {
                   Bootstrap
                 </h2>
                 <div className="text-center text-lg-start">
-                  <a href="#about" className="btn-get-started scrollto">
+                  <a href="" className="btn-get-started scrollto text-decoration-none hover">
                     Get Started
                   </a>
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 order-1 order-lg-2 hero-img">
+            <div className="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="20">
               <img
                 src="images/Home-bg.png"
-                className="img-fluid animated"
+                className="img-fluid vert-move"
                 alt=""
               />
             </div>
@@ -62,27 +62,31 @@ function Home() {
         </div>
       </section>
 
-      <div className="container my-5">
+      <div className="container py-3 py-lg-4">
+        <div className="text-center">
+          <h2>What We Do</h2>
+        </div>
         <div className="row py-1 py-lg-5 sectionbox justify-content-center align-items-center gy-5">
           {boxes.map((box, index) => (
-            <div key={index} className="col-md-6 ">
+            <div key={index} className="col-md-6  " data-aos="zoom-out" data-aos-delay="40">
               <Box type={box.type} content={box.content} />
             </div>
           ))}
         </div>
       </div>
-      <div className="container py-2 py-lg-4">
-      <div className="text-center">
-      <h2>Services</h2>
-      </div>
-        <div className="row sectionbox justify-content-center align-items-center py-3">
+      <div className="container py-3 py-lg-4">
+        <div className="text-center">
+          <h2>Services</h2>
+        </div>
+        <div className="row sectionbox justify-content-center align-items-center py-3" data-aos="zoom-out" data-aos-delay="500"
+        >
           {[1, 2, 3, 4].map((_, index) => (
-            <div key={index} className="col-md-4 col-lg-3 col-sm-6 gy-3 ">
-            <div class="icon-box card shadow ">
-            <FaBuilding size={35} className="mb-2" /  >
-            <h3>Eius provident</h3>
-            <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
-          </div>
+            <div key={index} className="col-md-4 col-lg-3 col-sm-6 gy-3 " data-aos="zoom-in"  >
+              <div class="icon-box card shadow hover ">
+                <FaBuilding size={35} className="mb-2" />
+                <h3>Eius provident</h3>
+                <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+              </div>
             </div>
           ))}
         </div>
@@ -90,7 +94,7 @@ function Home() {
       <section className="testimonial">
         <div className="container py-lg-5 py-1">
           <div className="row py-5 justify-content-center align-items-center">
-            <div className="col-md-5">
+            <div className="col-md-5" data-aos="zoom-out" data-aos-delay="500">
               <h2>Testimonials</h2>
               <p>
                 Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -100,7 +104,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="col-md-7 shadow-lg mt-3 mt-md-0 ">
+            <div className="col-md-7 shadow-lg mt-3 mt-md-0  " data-aos="zoom-out" data-aos-delay="500">
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -119,8 +123,8 @@ function Home() {
                 onSlideChange={() => console.log("slide change")}
               >
                 {Images.map((data, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="testimonial-item py-5">
+                  <SwiperSlide key={index} className="hover">
+                    <div className="testimonial-item py-5" >
                       <div className="d-flex">
                         <div>
                           <img
@@ -161,16 +165,16 @@ function Home() {
       </section>
 
       <section className="recent-post">
-        <div className="container py-2 py-lg-4">
-         <div className="text-center">
-         <h2>Recent Article</h2>
-         </div>
+        <div className="container py-3 py-lg-4">
+          <div className="text-center">
+            <h2>Recent Article</h2>
+          </div>
 
 
           <div className="row gy-3 py-3">
             {[1, 2, 3].map((_, index) => (
-              <div key={index} className="col-md-6 col-xl-4 rounded">
-                <article className=" shadow">
+              <div key={index} className="col-md-6 col-xl-4 rounded " data-aos="zoom-out" data-aos-delay="200">
+                <article className="shadow hover">
                   <div className="post-img">
                     <img
                       src="images/blog-1.jpg"

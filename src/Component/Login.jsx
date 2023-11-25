@@ -28,7 +28,7 @@ const LoginForm = () => {
         <div className="container py-5">
             <div className='row py-5 justify-content-center align-items-center shadow-lg p-3 mb-5 bg-white rounded'>
                 <div className='col-lg-6 my-2 d-none d-lg-block'>
-                    <img src='images/login.jpg' className='img-fluid my-2'></img>
+                    <img src='images/login.jpg' className='img-fluid my-2 hover'></img>
                 </div>
                 <div className='col-lg-6 col-12'>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -111,7 +111,7 @@ const LoginForm = () => {
                         </div>
                         <div className='row flex-column flex-md-row justify-content-center align-items-center'>
                             <div className='col-md-4 text-start text-md-center'>
-                                <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold">
+                                <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold scale">
                                     Submit
                                 </button>
                             </div>
@@ -129,7 +129,7 @@ const LoginForm = () => {
                             </div>
                          <div>
                          <p className="text-start text-muted mt-4 mb-0">Forget Password <a href="#!"
-                         className="fw-bold text-body"><u> Reset </u></a></p>
+                         className="fw-bold text-body  text-decoration-none underline d-inline-block"> Reset</a></p>
                          </div>
 
                         </div>
