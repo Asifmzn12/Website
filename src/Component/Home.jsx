@@ -35,6 +35,7 @@ function Home() {
   return (
     <>
       <section id="hero">
+   
         <div className="container my-5">
           <div className="row justify-content-between">
             <div className="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="20" >
@@ -62,13 +63,13 @@ function Home() {
         </div>
       </section>
 
-      <div className="container py-3 py-lg-4">
+      <div className="container mt-5 py-3 py-lg-4">
         <div className="text-center">
           <h2>What We Do</h2>
         </div>
         <div className="row py-1 py-lg-5 sectionbox justify-content-center align-items-center gy-5">
           {boxes.map((box, index) => (
-            <div key={index} className="col-md-6  " data-aos="zoom-out" data-aos-delay="40">
+            <div key={index} className="col-md-6  " data-aos="zoom-out" data-aos-delay="100">
               <Box type={box.type} content={box.content} />
             </div>
           ))}

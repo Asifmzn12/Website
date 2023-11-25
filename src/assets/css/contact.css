@@ -21,7 +21,7 @@ color:#ff0000;
     box-shadow: none;
 }
 .bg-wheat{
-    background-color: wheat;
+    background-color: #e7e4de;
 }
 
 .Contactus::before{
@@ -30,7 +30,7 @@ position:absolute;
 top: 0;
 right:0;
 left:0;
-background:wheat; 
+background:#e7e4de; 
 }
 .social-icons .icons{
     border: 2px solid black;

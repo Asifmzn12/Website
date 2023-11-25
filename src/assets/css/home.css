@@ -62,14 +62,14 @@
   color: #364146;
 }
 #hero h2 {
-  color: #576971;
   margin-bottom: 30px;
   font-size: 24px;
+  line-height: 42px;
 }
 
 #hero h1{
-  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);  
-    -webkit-background-clip: text;
+  background: -webkit-linear-gradient(45deg, #09009f, #080a09 80%);
+      -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
   
@@ -191,5 +191,26 @@ line-height: 30px;
 .icon-box p{
   font-size: 15px;
   font-weight: 400;
+}
+
+
+#hero{
+  height: 100%;
+    position: relative;
+    background-color: #e7e4de;
+    background-image: linear-gradient(315deg,
+            #a37b3c 0% transparent, #efece5 74%);
 
 }
+
+/* #hero:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height:300px;
+  background: url("images/wave.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
