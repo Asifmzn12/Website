@@ -1,10 +1,12 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import {Link,useNavigate} from 'react-router-dom'
 import { FaEye, FaEyeSlash, FaFacebook, FaGoogle } from 'react-icons/fa';
 import '../assets/css/form.css'
 
 
 const LoginForm = () => {
+    const navigate=useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -19,8 +21,8 @@ const LoginForm = () => {
 
 
     const onSubmit = (data) => {
-        // Add your login logic here
-        alert(`${data.email},${data.password}`)
+navigate("/")    
+        
 
     };
 
@@ -34,6 +36,10 @@ const LoginForm = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <h2 className="text-md-center my-1">Welcome Back</h2>
+                        <div>
+                        <p className="text-start text-md-center text-muted mt-1 mt-md-4 mb-0">Doesn&apos;t have an account yet? <Link to="/signup"
+                            className="fw-bold text-body  text-decoration-none underline d-inline-block"> Sign Up</Link></p>
+                    </div>
 
                         <div className="form-group my-4">
                             <input
@@ -71,6 +77,7 @@ const LoginForm = () => {
                                     },
                                 })}
                             />
+                          
                             <div
                                 className="input-group-append"
                                 onClick={togglePasswordVisibility}
@@ -81,7 +88,11 @@ const LoginForm = () => {
                                 </span>
                             </div>
                             {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
-
+                            <small className="text-muted position-absolute end-0 mt-1">
+                            <Link to="#" className="text-decoration-none underline">
+                              Forget Password
+                            </Link>
+                          </small>
                         </div>
 
                         <div className="form-group my-4 position-relative">
@@ -95,6 +106,7 @@ const LoginForm = () => {
                                     validate: (value) => value === watch('password') || 'Passwords do not match',
                                 })}
                             />
+
                             <div
                                 className="input-group-append"
                                 onClick={toggleConfirmPasswordVisibility}
@@ -109,10 +121,23 @@ const LoginForm = () => {
                                 <div className="invalid-feedback">{errors.confirmPassword.message}</div>
                             )}
                         </div>
+                        <div className="form-check mb-3">
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="rememberMe"
+                          {...register('rememberMe')}
+                        />
+                        <label className="form-check-label" htmlFor="rememberMe">
+                          Remember Me
+                        </label>
+                      </div>
+
+
                         <div className='row flex-column flex-md-row justify-content-center align-items-center'>
-                            <div className='col-md-4 text-start text-md-center'>
+                            <div className='col-md-4 text-start '>
                                 <button type="submit" className="btn btn-primary my-3 py-2 px-5  fw-semibold scale">
-                                    Submit
+                                    Login
                                 </button>
                             </div>
                             <div className='col-12 col-md-8'>
@@ -124,14 +149,10 @@ const LoginForm = () => {
                                     <button type="button" className="btn btn-outline-danger mx-2">
                                         <FaGoogle />
                                     </button>
-                                    {/* Add more social login buttons as needed */}
+                                    {/* WE can add more social iocns here*/}
                                 </div>
                             </div>
-                         <div>
-                         <p className="text-start text-muted mt-4 mb-0">Forget Password <a href="#!"
-                         className="fw-bold text-body  text-decoration-none underline d-inline-block"> Reset</a></p>
-                         </div>
-
+                       
                         </div>
 
                     </form>
