@@ -8,7 +8,9 @@
     --light-color:#e9ecef;
     --primary-font:'Poppins', sans-serif;
     --secondry-font:'Roboto', sans-serif;
-    
+    --background-color: #f4f4f4;    
+    --text-color:#32353a;
+    --text2-color:33, 37, 41;
 }
 body{
     width: 100vw;

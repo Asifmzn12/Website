@@ -26,13 +26,6 @@
     background-color: rgba(0, 0, 0, 0.5); 
   }
 
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-
-
-
 /*--------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -100,4 +93,34 @@
       order: 1;
     }
   }
-  
+  .testimonial{
+    background-color: var(--background-color);
+  }
+  .testimonial-item .testimonial-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    border: 6px solid var(--background-color);
+    margin-right: 10px;
+}
+.testimonial .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color:var(--text-color)
+}
+.testimonial .testimonial-item h4 {
+  font-size: 14px;
+  margin: 0;
+    color: rgba(var(--text2-color), 0.5);
+}
+.stars svg{
+  color:#ffc107;
+}
+.swiper-slide img {
+  filter: blur(0);
+}
+.swiper-pagination-bullet{
+  background-color:#ffc107 !important;
+
+}

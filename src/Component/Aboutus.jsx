@@ -1,7 +1,7 @@
 import { useUserContext } from '../config/Usercontext';
 import Accordion from 'react-bootstrap/Accordion';
 
-import Images from './ImageApi';
+import Images from '../config/ImageApi'
 import Marquee from 'react-fast-marquee';
 import '../assets/css/about.css';
 
