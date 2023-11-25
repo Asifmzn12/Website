@@ -43,13 +43,13 @@ function Footer() {
                             <p className='subfooter-text text-lg-start text-center' >© Copyright 2023 Asif Ali</p>
                         </div>
                         <div className="col-md-6 icons d-flex justify-content-center socialicons  gap-5 align-items-center py-3">
-                            <BiLogoFacebookCircle size={"30px"} />
-                            <span className='bg-white  rounded-pill'>
+                            <BiLogoFacebookCircle size={"30px"} className='scale' />
+                            <span className='bg-white  rounded-pill scale'>
                                 <BiLogoInstagramAlt size={"26px"} style={{ color: "black" }} />
                             </span>
 
-                            <AiFillTwitterCircle size={"30px"} />
-                            <span className='bg-white  rounded-pill '>
+                            <AiFillTwitterCircle size={"30px"} className='scale' />
+                            <span className='bg-white  rounded-pill scale '>
                                 <BiLogoYoutube size={"26px"} style={{ color: "black" }} /></span>
 
                         </div>

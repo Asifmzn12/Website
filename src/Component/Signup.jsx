@@ -40,7 +40,7 @@ const Signup = () => {
             <div className='row py-5 shadow-lg p-3 mb-5 bg-white rounded' >
                 <div className="col-lg-6 d-none d-lg-block text-end">
                     <img src="images/Signup.jpg"
-                        alt="Sample photo" className="img-fluid"
+                        alt="Sample photo" className="img-fluid hover"
                     />
                 </div>
                 <div className='col-lg-6 col-md-12'>
@@ -163,12 +163,12 @@ const Signup = () => {
 
                         <div className='row mt-4 justify-content-start justify-content-lg-center align-items-start'>
                             <div className='col-12 col-md-4'>
-                                <button type="submit" className="btn btn-primary  py-2 px-5 fw-semibold">
+                                <button type="submit" className="btn btn-primary  py-2 px-5 fw-semibold scale">
                                     Register
                                 </button>
                             </div>
                             <p className="text-start text-lg-center text-muted mt-4 mb-0">Have already an account? <Link to='/login'
-                                className="fw-bold text-body"><u>Login here</u></Link></p>
+                                className="fw-bold text-body text-decoration-none underline">Login here</Link></p>
                         </div>
 
                     </form>

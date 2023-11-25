@@ -184,7 +184,7 @@ function Home() {
                   </div>
                   <p className="post-category pt-2">Technology</p>
                   <h2 className="title">
-                    <a href="#">Dolorum optio tempore voluptas dignissimos</a>
+                    <a href="#" className=" d-inline-block underline" >Dolorum optio tempore voluptas dignissimos</a>
                   </h2>
                   <div className="d-flex align-items-center">
                     <img

@@ -9,6 +9,8 @@
 .navbar-nav a{
     color: white !important;
     font-weight: 600;
+    position: relative;
+    transition:all 0.2s ease-in-out ;
 }
 @media screen and (min-width:992px) {
     .navbar-nav a{
@@ -25,4 +27,7 @@
 }
 .navbar-toggler{
     background-color: white !important;
+}
+.navbar-nav a:hover{
+transform: scale(0.9);    
 }
