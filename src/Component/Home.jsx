@@ -46,7 +46,7 @@ function Home() {
                   Bootstrap
                 </h2>
                 <div className="text-center text-lg-start">
-                  <a href="" className="btn-get-started scrollto text-decoration-none hover">
+                  <a href="" className="btn-get-started scrollto text-decoration-none scale">
                     Get Started
                   </a>
                 </div>
