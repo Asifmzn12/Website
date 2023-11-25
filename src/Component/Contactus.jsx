@@ -21,7 +21,7 @@ const Contactus = () => {
       <div className=" container-fluid bg-wheat g-0">
         <div className="container">
           <div className="row py-5 Contactus position-relative justify-content-center align-items-center ">
-            <div className="col-md-6 col-xl-9">
+            <div className="col-md-6 col-xl-7">
               <div className="d-flex flex-column gap-2">
                 <p>How can we help you?</p>
                 <h2>Contact us</h2>
@@ -39,7 +39,7 @@ const Contactus = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-4 col-xl-3 top-section">
+            <div className="col-md-6 col-lg-4 col-xl-5 top-section">
               <img src="images/contactus.webp" className="img-fluid vert-move"></img>
             </div>
           </div>

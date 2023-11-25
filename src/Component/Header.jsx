@@ -31,11 +31,7 @@ function Header() {
               Login
             </Nav.Link>
           </Nav>
-       
-
-
-
-        </Navbar.Collapse>
+            </Navbar.Collapse>
       </Container>
     </Navbar>
   );

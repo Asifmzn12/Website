@@ -29,5 +29,5 @@
     background-color: white !important;
 }
 .navbar-nav a:hover{
-transform: scale(0.9);    
+color: #0077b6 !important;    
 }
