@@ -1,15 +1,23 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import {Link,useNavigate} from 'react-router-dom'
+import ForgetPassword from './ForgetPassword';
+import { Link, useNavigate } from 'react-router-dom'
 import { FaEye, FaEyeSlash, FaFacebook, FaGoogle } from 'react-icons/fa';
 import '../assets/css/form.css'
 
 
 const LoginForm = () => {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [forgetPasswordModalVisible, setForgetPasswordModalVisible] = useState(false);
+
+
+    const showForgetPasswordModal = () => {
+        setForgetPasswordModalVisible(true);
+    };
+    console.log(forgetPasswordModalVisible)
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -20,9 +28,9 @@ const LoginForm = () => {
     };
 
 
-    const onSubmit = (data) => {
-navigate("/")    
-        
+    const onSubmit = () => {
+        navigate("/")
+
 
     };
 
@@ -37,9 +45,9 @@ navigate("/")
 
                         <h2 className="text-md-center my-1">Welcome Back</h2>
                         <div>
-                        <p className="text-start text-md-center text-muted mt-1 mt-md-4 mb-0">Doesn&apos;t have an account yet? <Link to="/signup"
-                            className="fw-bold text-body  text-decoration-none underline d-inline-block"> Sign Up</Link></p>
-                    </div>
+                            <p className="text-start text-md-center text-muted mt-1 mt-md-4 mb-0">Doesn&apos;t have an account yet? <Link to="/signup"
+                                className="fw-bold text-body  text-decoration-none underline d-inline-block"> Sign Up</Link></p>
+                        </div>
 
                         <div className="form-group my-4">
                             <input
@@ -77,7 +85,7 @@ navigate("/")
                                     },
                                 })}
                             />
-                          
+
                             <div
                                 className="input-group-append"
                                 onClick={togglePasswordVisibility}
@@ -89,10 +97,10 @@ navigate("/")
                             </div>
                             {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
                             <small className="text-muted position-absolute end-0 mt-1">
-                            <Link to="#" className="text-decoration-none underline">
-                              Forget Password
-                            </Link>
-                          </small>
+                                <Link to="#" className="text-decoration-none underline" onClick={showForgetPasswordModal}>
+                                    Forget Password
+                                </Link>
+                            </small>
                         </div>
 
                         <div className="form-group my-4 position-relative">
@@ -122,16 +130,16 @@ navigate("/")
                             )}
                         </div>
                         <div className="form-check mb-3">
-                        <input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="rememberMe"
-                          {...register('rememberMe')}
-                        />
-                        <label className="form-check-label" htmlFor="rememberMe">
-                          Remember Me
-                        </label>
-                      </div>
+                            <input
+                                type="checkbox"
+                                className="form-check-input"
+                                id="rememberMe"
+                                {...register('rememberMe')}
+                            />
+                            <label className="form-check-label" htmlFor="rememberMe">
+                                Remember Me
+                            </label>
+                        </div>
 
 
                         <div className='row flex-column flex-md-row justify-content-center align-items-center'>
@@ -149,16 +157,19 @@ navigate("/")
                                     <button type="button" className="btn btn-outline-danger mx-2">
                                         <FaGoogle />
                                     </button>
-                                    {/* WE can add more social iocns here*/}
                                 </div>
                             </div>
-                       
+
                         </div>
 
                     </form>
 
                 </div>
             </div>
+
+
+            {forgetPasswordModalVisible && <ForgetPassword show={forgetPasswordModalVisible} onHide={() => setForgetPasswordModalVisible(false)} />}
+            
 
 
 

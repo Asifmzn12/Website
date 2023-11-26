@@ -10,6 +10,7 @@ import LoginForm from './Component/Login';
 import Home from './Component/Home';
 import Aboutus from './Component/Aboutus';
 import ScrollToTop from './Component/ScrollToTop';
+import Portfolio from './Component/Portfolio'
 import AOS from 'aos';
 // ..
 AOS.init();
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Aboutus />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contactus />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<LoginForm />} />

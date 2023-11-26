@@ -33,3 +33,10 @@ color: red;
 .top-50{
     top: 25% !important;
 }
+
+
+
+
+.modal-header {
+border-bottom: none;
+}
