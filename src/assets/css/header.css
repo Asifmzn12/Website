@@ -31,3 +31,10 @@
 .navbar-nav a:hover{
 color: #0077b6 !important;    
 }
+.logoImg{
+    max-width: 130px;
+    max-height: 60px;
+    color: white !important;
+    background: white !important;
+    border-radius: 50%;
+}
