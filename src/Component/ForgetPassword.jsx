@@ -28,7 +28,7 @@ function MyVerticallyCenteredModal(props) {
 
                         <div className=' d-flex flex-column gap-3 justify-content-center align-items-center'>
                         <RiLockPasswordLine size={50} />
-                        <h3>Let&apso;s Reset Password</h3>
+                        <h3>Let&apos;s Reset Password</h3>
                         <p>Please enter email or phone </p>
                          </div>
                             <div className='col-12 form-group'>
