@@ -60,7 +60,7 @@ function MyVerticallyCenteredModal(props) {
 
                             </div>
                             <div className='col-12'>
-                                <button type="submit " className='btn btn-primary'>Submit</button>
+                                <button type="submit" className='btn btn-primary scale px-5'>Submit</button>
                             </div>
 
                         </div>

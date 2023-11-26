@@ -61,7 +61,7 @@ const GalleryComponent = () => {
     }, [currentSearch, page]); 
 
     return (
-        <div className='container py-5 my-5'>
+        <div className='container py-2 py-md-5'>
             <form onSubmit={handleSearch}>
                 <div className='row my-4 g-0 gap-3 justify-content-center'>
                     <div className='col-md-4'>
@@ -75,7 +75,7 @@ const GalleryComponent = () => {
                         />
                     </div>
                     <div className='col-md-6'>
-                        <button type="submit" className='btn btn-primary scale'>Search</button>
+                        <button type="submit" className='btn btn-primary scale px-5'>Search</button>
                     </div>
                 </div>
 
