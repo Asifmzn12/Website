@@ -24,9 +24,6 @@ function Header() {
             <Nav.Link as={Link} to="contact">
               Contact
             </Nav.Link>
-            <Nav.Link as={Link} to="signup" key="signup" className="signupBtn my-3 my-lg-0">
-              Sign Up
-            </Nav.Link>
             <Nav.Link as={Link} to="login" key="login" className="loginBtn">
               Login
             </Nav.Link>
