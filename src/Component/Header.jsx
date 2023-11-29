@@ -6,7 +6,7 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar-bg py-3 overflow-hidden" fixed="top">
       <Container fluid>
-        <Navbar.Brand as={Link} to="#home">
+        <Navbar.Brand as={Link} to="/">
           <img src='images/logo.png' alt='Logo' className="logoImg"></img> 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
