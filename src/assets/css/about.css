@@ -7,12 +7,10 @@
 }
 .card-image{
     max-width: 50%;
-    filter: grayscale(1);
     opacity: 0.5;
     transition: all 0.2s ease-in;
 }
 .card-image:hover{
-filter: grayscale(0);
     opacity: 1;
     transition: all 0.2s ease-in;
 }
@@ -21,3 +19,34 @@ filter: grayscale(0);
     height: 400px !important;
     max-height: 600px;
 }
+.Ac-header{
+    -webkit-text-fill-color: black;
+
+
+}
+
+.team-card{
+    transition: all 0.3s ease-in-out 0.1s;
+    position: relative;
+    z-index: 1;
+}
+.team-card:hover{
+    transform: scale(1.08);
+
+}
+.team-social-icons{
+background: rgba(255, 255, 255, 0.3);
+    ;
+}
+.team-social-icons,.team-social-icons svg{
+    right: 2px !important;
+    transition: all 0.2s ease-in-out;
+}
+.team-card:hover .team-social-icons{
+opacity: 1 !important;
+position: relative;
+}
+.team-social-icons svg:hover{
+transform: scale(0.9);
+}
+

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import Images from "../config/ImageApi";
+import { Images, SevicesImage } from "../config/ImageApi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import {
@@ -12,7 +12,7 @@ import {
 } from "swiper/modules";
 import "swiper/css/pagination";
 import "../assets/css/home.css";
-import { FaStar, FaQuoteLeft, FaQuoteRight, FaBuilding } from "react-icons/fa";
+import { FaStar, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { boxes } from "../config/Homecard";
 const Box = ({ type, content }) => {
@@ -22,8 +22,8 @@ const Box = ({ type, content }) => {
   } else if (type === "text") {
     return (
       <div>
-        <h2>{content.title}</h2>
-        <p>{content.para}</p>
+        <h3>{content.title}</h3>
+        <p className="work-para">{content.para}</p>
       </div>
     );
   }
@@ -35,7 +35,7 @@ function Home() {
   return (
     <>
       <section id="hero">
-   
+
         <div className="container my-5">
           <div className="row justify-content-between">
             <div className="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="20" >
@@ -63,9 +63,9 @@ function Home() {
         </div>
       </section>
 
-      <div className="container mt-5 py-3 py-lg-4">
+      <div className="container pt-md-5 mb-2 py-2">
         <div className="text-center">
-          <h2>What We Do</h2>
+          <h2 className="my-4 my-md-0">What We Do</h2>
         </div>
         <div className="row py-1 py-lg-5 sectionbox justify-content-center align-items-center gy-5">
           {boxes.map((box, index) => (
@@ -75,23 +75,31 @@ function Home() {
           ))}
         </div>
       </div>
-      <div className="container py-3 py-lg-4">
-        <div className="text-center">
-          <h2>Services</h2>
-        </div>
-        <div className="row sectionbox justify-content-center align-items-center py-3" data-aos="zoom-out" data-aos-delay="500"
-        >
-          {[1, 2, 3, 4].map((_, index) => (
-            <div key={index} className="col-md-4 col-lg-3 col-sm-6 gy-3 " data-aos="zoom-in"  >
-              <div class="icon-box card shadow hover ">
-                <FaBuilding size={35} className="mb-2" />
-                <h3>Eius provident</h3>
-                <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+      <section className="Services">
+        <div className="container py-3 py-lg-4">
+          <div className="text-center">
+            <h2>Services</h2>
+          </div>
+          <div className="row sectionbox justify-content-center align-items-stretch py-3" data-aos="zoom-out" data-aos-delay="500"
+          >
+            {SevicesImage.map((images, index) => (
+              <div key={index} className="d-flex col-xl-3 col-lg-4 col-sm-6 gy-3 " data-aos="zoom-in"  >
+                <div class="icon-box card shadow hover d-flex  ">
+                  <div className="d-flex justify-content-center align-content-center">
+                    <img src={images.path} className="img-fluid img-hover"></img>
+                  </div>
+                  <div className="text mt-4">
+                    <h3 className="" >{images.title}</h3>
+                    <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+
+      </section>
       <section className="testimonial">
         <div className="container py-lg-5 py-1">
           <div className="row py-5 justify-content-center align-items-center">
@@ -120,8 +128,8 @@ function Home() {
                   clickable: true,
                 }}
                 navigation={true}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
+              // onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log("slide change")}
               >
                 {Images.map((data, index) => (
                   <SwiperSlide key={index} className="hover">
