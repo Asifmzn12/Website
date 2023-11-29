@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import { Images, SevicesImage } from "../config/ImageApi";
+import { Images, SevicesImage, } from "../config/ImageApi";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useUserContext } from "../config/Usercontext";
 import "swiper/css";
 import {
   Navigation,
@@ -32,6 +33,9 @@ const Box = ({ type, content }) => {
 };
 
 function Home() {
+  const data=useUserContext();
+  const images=data.slice(0,3)
+  console.log(images);
   return (
     <>
       <section id="hero">
@@ -181,12 +185,12 @@ function Home() {
 
 
           <div className="row gy-3 py-3">
-            {[1, 2, 3].map((_, index) => (
+            {images.map((ImageData, index) => (
               <div key={index} className="col-md-6 col-xl-4 rounded " data-aos="zoom-out" data-aos-delay="200">
                 <article className="shadow hover">
                   <div className="post-img">
                     <img
-                      src="images/blog-1.jpg"
+                      src={ImageData.img}
                       alt=""
                       className="img-fluid "
                     />
