@@ -17,7 +17,6 @@ import { FaStar, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { boxes } from "../config/Homecard";
 const Box = ({ type, content }) => {
-  console.log();
   if (type === "image") {
     return <img src={content} alt="Box Image" className="img-fluid rounded hover" />;
   } else if (type === "text") {
@@ -35,7 +34,6 @@ const Box = ({ type, content }) => {
 function Home() {
   const data=useUserContext();
   const images=data.slice(0,3)
-  console.log(images);
   return (
     <>
       <section id="hero">
@@ -88,7 +86,7 @@ function Home() {
           >
             {SevicesImage.map((images, index) => (
               <div key={index} className="d-flex col-xl-3 col-lg-4 col-sm-6 gy-3 " data-aos="zoom-in"  >
-                <div class="icon-box card shadow hover d-flex  ">
+                <div className="icon-box card shadow hover d-flex  ">
                   <div className="d-flex justify-content-center align-content-center">
                     <img src={images.path} className="img-fluid img-hover"></img>
                   </div>
@@ -208,7 +206,7 @@ function Home() {
                     <div className="post-meta">
                       <p className="post-author">Maria Doe</p>
                       <p className="post-date">
-                        <time datetime="2022-01-01">Jan 1, 2022</time>
+                        <time dateTime="2022-01-01">Jan 1, 2022</time>
                       </p>
                     </div>
                   </div>

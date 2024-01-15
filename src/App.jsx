@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { inject } from '@vercel/analytics';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { UserProvider } from './config/Usercontext';
@@ -15,6 +17,8 @@ import AOS from 'aos';
 // ..
 AOS.init();
 function App() {
+  inject();
+
   return (
     <UserProvider>
       <BrowserRouter>
