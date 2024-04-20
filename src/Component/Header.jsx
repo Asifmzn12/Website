@@ -19,7 +19,7 @@ function Header() {
               About
             </Nav.Link>
             <Nav.Link as={Link} to="portfolio">
-              Portfolio
+              Gallery
             </Nav.Link>
             <Nav.Link as={Link} to="contact">
               Contact

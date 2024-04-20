@@ -22,7 +22,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
         id: 2,
         icons: CiPhone,
         title:"Contact ",
-        content: "+91-8868873958",
+        content: "+91-967574****",
         content2: "+91-9756680778"
 
 
@@ -31,7 +31,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
         id: 3,
         icons: FaRegEnvelope,
         title:"Email",
-        content: "Asifmzn13@gmail.com",
+        content: "Aliiasif3958@gmail.com",
         content2: "Example@gmail.com"
 
     },
